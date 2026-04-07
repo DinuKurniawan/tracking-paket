@@ -58,3 +58,28 @@ Aplikasi tracking paket dengan:
 3. Klik **Lacak Paket**.
 
 App akan menampilkan ringkasan status, timeline tracking, dan marker lokasi pada peta.
+
+## Deploy ke Vercel
+
+1. Link project:
+
+   ```bash
+   vercel link
+   ```
+
+2. Set environment variable di Vercel (minimal untuk `production`):
+
+   ```bash
+   vercel env add RAJAONGKIR_SHIPPING_COST_API_KEY production
+   vercel env add RAJAONGKIR_SHIPPING_DELIVERY_API_KEY production
+   vercel env add RAJAONGKIR_BASE_URL production
+   vercel env add RAJAONGKIR_DELIVERY_BASE_URL production
+   ```
+
+3. Deploy:
+
+   ```bash
+   vercel --prod
+   ```
+
+4. Jika ingin env juga aktif di preview branch, tambahkan env yang sama untuk target `preview`.
